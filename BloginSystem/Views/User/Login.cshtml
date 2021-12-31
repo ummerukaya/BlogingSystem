@@ -1,0 +1,35 @@
+﻿@model BloginSystem.Models.UserModel
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+<h2>Login</h2>
+
+@using (Html.BeginForm())
+{
+    <div>
+        @Html.Label("Email")
+    </div>
+    <div>
+        @Html.Editor("email")
+    </div>
+    <div>
+        @Html.Label("Password")
+    </div>
+    <div>
+        @Html.Editor("password")
+    </div>
+    <div>
+        <input type="submit" value="Login" />
+    </div>
+}
+
+<div>
+    <p>Not yet registered?</p>
+    <a asp-action="Registration">register now</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
