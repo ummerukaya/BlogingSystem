@@ -1,5 +1,5 @@
-﻿using BloginSystem.Entities;
-using BloginSystem.Models;
+﻿using BloginSystem.Models;
+using BloginSystem.DataAccess;
 using System.Collections.Generic;
 
 namespace BloginSystem.Factories

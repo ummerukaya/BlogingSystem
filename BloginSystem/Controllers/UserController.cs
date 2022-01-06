@@ -1,16 +1,10 @@
 ﻿using BloginSystem.Cookies;
-using BloginSystem.Entities;
 using BloginSystem.Factories;
 using BloginSystem.Models;
-using BloginSystem.Services;
-using BloginSystem.Validators;
-using Microsoft.AspNetCore.Http;
+using BloginSystem.Service;
 using Microsoft.AspNetCore.Mvc;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace BloginSystem.Controllers
 {
@@ -55,14 +49,14 @@ namespace BloginSystem.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Login(LoggedinUserModel model)
         {
-            var loggedinUser = _userService.Validate(model);
+            var loggedinUser = _userService.Validate(model.Email,model.Password);
             //validate 
             if (loggedinUser!=null)
             {
                 string str = loggedinUser.Email.ToString() + ":" + loggedinUser.Password.ToString();
                 str = Convert.ToBase64String(Encoding.UTF8.GetBytes(str));
                 CookieHelper.SetUserCookie(HttpContext, str);
-                return RedirectToAction("Index","User");
+                return RedirectToAction("Index","Home");
             }
             else 
             {
@@ -70,31 +64,7 @@ namespace BloginSystem.Controllers
             }
 
         }
-        [Route("User/Index")]
-        public IActionResult Index()
-        {
-            try
-            {
-                var cookieVal = CookieHelper.GetUserCookie(HttpContext);
-                var str = Encoding.UTF8.GetString(Convert.FromBase64String(cookieVal));
-
-                var userData = str.Split(":");
-                var userModel = new LoggedinUserModel()
-                {
-                        Email = userData[0],
-                        Password = userData[1]
-                };
-                var loggedinUser = _userService.Validate(userModel);
-
-                return View();
-
-            }
-            catch
-            {
-                throw new Exception("invalid user");
-            }
-            
-        }
+       
 
     }
 }

@@ -1,9 +1,6 @@
-﻿using BloginSystem.Entities;
-using BloginSystem.Models;
-using System;
+﻿using BloginSystem.Models;
+using BloginSystem.DataAccess;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace BloginSystem.Factories
 {

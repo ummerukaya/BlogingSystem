@@ -2,7 +2,19 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<style>
+    a {
+        padding: 5px;
+        margin: 5px;
+        color: white;
+    }
+
+</style>
+
+<div>
+    <h1>Welcome to home page</h1>
 </div>
+
+@section Scripts {
+    @(await Component.InvokeAsync("SocialLinks"))
+}

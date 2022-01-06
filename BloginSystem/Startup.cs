@@ -1,22 +1,15 @@
-using BloginSystem.Data;
-using BloginSystem.Entities;
+using BloginSystem.DataAccess;
 using BloginSystem.Factories;
-using BloginSystem.Repositories;
-using BloginSystem.Services;
+using BloginSystem.Repository;
+using BloginSystem.Service;
 using BloginSystem.Validators;
 using FluentValidation;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace BloginSystem
 {
@@ -32,6 +25,7 @@ namespace BloginSystem
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddAutoMapper(typeof(Startup));
             services.AddControllersWithViews();
             services.AddDbContext<BlogingContext>();
             services.AddFluentValidation(x =>
@@ -44,9 +38,9 @@ namespace BloginSystem
             services.AddTransient<IValidator<BlogPost>, BlogPostValidator>();
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
             services.AddScoped<IBlogPostService, BlogPostService>();
-            services.AddScoped<IUserService, UserService>();
             services.AddScoped<IBlogPostFactory, BlogPostFactory>();
             services.AddScoped<IUserFactory, UserFactory>();
+            services.AddScoped<IUserService, UserService>();
 
             services.AddAuthentication()
             .AddCookie();
@@ -77,7 +71,7 @@ namespace BloginSystem
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=BlogPost}/{action=AllBlogPosts}/{id?}");
+                    pattern: "{controller=User}/{action=Login}/{id?}");
             });
         }
     }

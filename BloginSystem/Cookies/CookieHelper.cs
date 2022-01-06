@@ -1,13 +1,9 @@
-﻿using BloginSystem.Entities;
-using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Http;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace BloginSystem.Cookies
 {
-	public class CookieHelper
+    public class CookieHelper
 	{
 		public static void SetUserCookie(HttpContext httpContext,string cookie)
 		{

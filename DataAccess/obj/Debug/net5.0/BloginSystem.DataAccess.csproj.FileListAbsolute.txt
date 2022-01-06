@@ -1,0 +1,15 @@
+C:\Users\BS687\source\repos\BlogingSystem\DataAccess\bin\Debug\net5.0\BloginSystem.DataAccess.deps.json
+C:\Users\BS687\source\repos\BlogingSystem\DataAccess\bin\Debug\net5.0\BloginSystem.DataAccess.runtimeconfig.json
+C:\Users\BS687\source\repos\BlogingSystem\DataAccess\bin\Debug\net5.0\BloginSystem.DataAccess.runtimeconfig.dev.json
+C:\Users\BS687\source\repos\BlogingSystem\DataAccess\bin\Debug\net5.0\BloginSystem.DataAccess.dll
+C:\Users\BS687\source\repos\BlogingSystem\DataAccess\bin\Debug\net5.0\ref\BloginSystem.DataAccess.dll
+C:\Users\BS687\source\repos\BlogingSystem\DataAccess\bin\Debug\net5.0\BloginSystem.DataAccess.pdb
+C:\Users\BS687\source\repos\BlogingSystem\DataAccess\obj\Debug\net5.0\BloginSystem.DataAccess.csproj.AssemblyReference.cache
+C:\Users\BS687\source\repos\BlogingSystem\DataAccess\obj\Debug\net5.0\BloginSystem.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\BS687\source\repos\BlogingSystem\DataAccess\obj\Debug\net5.0\BloginSystem.DataAccess.AssemblyInfoInputs.cache
+C:\Users\BS687\source\repos\BlogingSystem\DataAccess\obj\Debug\net5.0\BloginSystem.DataAccess.AssemblyInfo.cs
+C:\Users\BS687\source\repos\BlogingSystem\DataAccess\obj\Debug\net5.0\BloginSystem.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\BS687\source\repos\BlogingSystem\DataAccess\obj\Debug\net5.0\BloginSystem.DataAccess.dll
+C:\Users\BS687\source\repos\BlogingSystem\DataAccess\obj\Debug\net5.0\ref\BloginSystem.DataAccess.dll
+C:\Users\BS687\source\repos\BlogingSystem\DataAccess\obj\Debug\net5.0\BloginSystem.DataAccess.pdb
+C:\Users\BS687\source\repos\BlogingSystem\DataAccess\obj\Debug\net5.0\BloginSystem.DataAccess.genruntimeconfig.cache
